@@ -1,0 +1,21 @@
+services:
+  deep-learning5:
+    container_name: deep-learning5
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./step01:/app/step01
+      - ./step02:/app/step02
+      - ./step03:/app/step03
+      - ./step04:/app/step04
+      - ./step05:/app/step05
+      - ./step06:/app/step06
+      - ./step07:/app/step07
+      - ./step08:/app/step08
+      - ./step09:/app/step09
+      - ./step10:/app/step10
+      - ./notebooks:/app/notebooks
+    tty: true
+    ports:
+      - 8888:8888
